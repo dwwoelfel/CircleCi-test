@@ -11,6 +11,8 @@
 		$connection = new PDO($dsn, $login, $password, $options);
 		echo '<pre>' . print_r($connection, true) . '</pre>';
 	} catch (Exception $e) {
-		throw new Exception($e->getMessage(), $e->getCode());
+		echo 'MESSAGE: ' . $e->getMessage();
+		echo PHP_EOL . PHP_EOL;
+		echo 'CODE: ' . $e->getCode();
 	}
 ?>
